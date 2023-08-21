@@ -7,6 +7,7 @@ import { selectContacts } from '../../redux/contacts/selectors';
 export const Form = () => {
   const dispatch = useDispatch();
   const ContactsArray = useSelector(selectContacts);
+  console.log(ContactsArray);
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -17,6 +18,7 @@ export const Form = () => {
     };
 
     if (ContactsArray.map(el => el.name).includes(form.elements.name.value))
+      //dispatch(editContact(contact));
       alert(`${form.elements.name.value} is already in contacts`);
     else dispatch(addContact(contact));
     form.reset();

@@ -5,6 +5,7 @@ const initialState = {
   items: [],
   isLoading: false,
   error: null,
+  contactId: '',
 };
 
 const handlePending = state => {
@@ -19,6 +20,11 @@ const handleRejected = (state, action) => {
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState: initialState,
+  reducers: {
+    editContact(state, action) {
+      state.contactId = action.payload;
+    },
+  },
   extraReducers: {
     [fetchContacts.fulfilled](state, action) {
       state.isLoading = false;
@@ -30,6 +36,7 @@ const contactsSlice = createSlice({
       state.error = null;
       state.items.push(action.payload);
     },
+
     [deleteContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
@@ -41,10 +48,13 @@ const contactsSlice = createSlice({
     [fetchContacts.pending]: handlePending,
     [addContact.pending]: handlePending,
     [deleteContact.pending]: handlePending,
+    //[editContact.pending]: handlePending,
     [fetchContacts.rejected]: handleRejected,
     [addContact.rejected]: handleRejected,
     [deleteContact.rejected]: handleRejected,
+    //[editContact.rejected]: handleRejected,
   },
 });
+export const { editContact } = contactsSlice.actions;
 
 export const contactsReducer = contactsSlice.reducer;

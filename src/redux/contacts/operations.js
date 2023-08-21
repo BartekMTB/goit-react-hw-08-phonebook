@@ -1,4 +1,4 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk, createAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchContacts = createAsyncThunk(
@@ -36,3 +36,5 @@ export const deleteContact = createAsyncThunk(
     }
   }
 );
+
+export const editContact = createAction('contacts/editContact');
