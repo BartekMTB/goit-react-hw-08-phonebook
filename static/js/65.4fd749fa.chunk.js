@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[65],{5065:function(e,t,o){o.r(t),o.d(t,{default:function(){return a}});var r="homePage_container__KQUO7",n=o(184),a=function(){return(0,n.jsx)("div",{className:r,children:(0,n.jsx)("h1",{class:"text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl",children:"Welcome to goit-react-hw-08-phonebook homework :)"})})}}}]);
+//# sourceMappingURL=65.4fd749fa.chunk.js.map
