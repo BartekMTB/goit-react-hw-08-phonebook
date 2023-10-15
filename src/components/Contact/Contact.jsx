@@ -24,7 +24,7 @@ export const Contact = ({ id, name, number }) => {
     <li className={css.contactsItem}>
       {name} {number}{' '}
       <button
-        className={css.contactBtn}
+        class={css.contactBtn}
         type="button"
         onClick={() => dispatch(deleteContact(id))}
       >

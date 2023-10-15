@@ -19,14 +19,18 @@ const Contacts = () => {
   return (
     <>
       <Helmet>
-        <title>Your tasks</title>
+        <title>Your contactbook</title>
       </Helmet>
 
       <div>{isLoading && 'Request in progress...'}</div>
       <div className={css.main_div}>
-        <h2>Phonebook</h2>
+        <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          Phonebook
+        </h2>
         <Form />
-        <h2>Contacts</h2>
+        <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          Contacts
+        </h2>
         <Filter />
 
         <ContactList></ContactList>
